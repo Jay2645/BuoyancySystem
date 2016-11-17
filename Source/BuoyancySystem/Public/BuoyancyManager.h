@@ -18,6 +18,17 @@ public:
 	UPROPERTY(Category = "River", EditAnywhere)
 	float RiverZLocation;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Waves")
+	float MedianWaveOneAmplitude;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Waves")
+	float MedianWaveOneWavelength;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Waves")
+	float MedianWaveTwoAmplitude;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Waves")
+	float MedianWaveTwoWavelength;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Waves")
+	float Steepness;
+
 	UPROPERTY(Category = "Material", EditAnywhere)
 	UMaterialParameterCollection* MaterialCollection;
 

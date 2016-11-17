@@ -11,24 +11,30 @@ UBuoyancyManager::UBuoyancyManager()
 	PrimaryComponentTick.bCanEverTick = false;
 
 	RiverZLocation = 0.0f;
+
+	MedianWaveOneAmplitude = 85.0f;
+	MedianWaveOneWavelength = 2500.0f;
+	MedianWaveTwoAmplitude = 25.0f;
+	MedianWaveTwoWavelength = 500.0f;
+	Steepness = 0.5f;
+
 	MaterialCollection = NULL;
 }
 
 FVector UBuoyancyManager::GetWaveHeightValue(FVector location, float time)
 {
-	if (MaterialCollection == NULL)
+	if (MaterialCollection != NULL)
 	{
-		return FVector(0, 0, 0);
+		MedianWaveOneAmplitude = UKismetMaterialLibrary::GetScalarParameterValue(GetWorld(), MaterialCollection, TEXT("Wave 1 Height"));
+		MedianWaveOneWavelength = UKismetMaterialLibrary::GetScalarParameterValue(GetWorld(), MaterialCollection, TEXT("Wave 1 Scale"));
+		MedianWaveTwoAmplitude = UKismetMaterialLibrary::GetScalarParameterValue(GetWorld(), MaterialCollection, TEXT("Wave 2 Height"));
+		MedianWaveTwoWavelength = UKismetMaterialLibrary::GetScalarParameterValue(GetWorld(), MaterialCollection, TEXT("Wave 2 Scale"));
+		Steepness = UKismetMaterialLibrary::GetScalarParameterValue(GetWorld(), MaterialCollection, TEXT("Steepness"));
 	}
-	float medianWaveOneAmplitude = UKismetMaterialLibrary::GetScalarParameterValue(GetWorld(), MaterialCollection, TEXT("Wave 1 Height"));
-	float medianWaveOneWavelength = UKismetMaterialLibrary::GetScalarParameterValue(GetWorld(), MaterialCollection, TEXT("Wave 1 Scale"));
-	float medianWaveTwoAmplitude = UKismetMaterialLibrary::GetScalarParameterValue(GetWorld(), MaterialCollection, TEXT("Wave 2 Height"));
-	float medianWaveTwoWavelength = UKismetMaterialLibrary::GetScalarParameterValue(GetWorld(), MaterialCollection, TEXT("Wave 2 Scale"));
-	float steepness = UKismetMaterialLibrary::GetScalarParameterValue(GetWorld(), MaterialCollection, TEXT("Steepness"));
 	FVector sum = FVector(0, 0, 0);
 
-	sum += CalculateGerstnerWaveCluster(medianWaveOneWavelength, medianWaveOneAmplitude, FVector2D(location.X, location.Y), FVector2D(0, 1), steepness, time);
-	sum += CalculateGerstnerWaveCluster(medianWaveTwoWavelength, medianWaveTwoAmplitude, FVector2D(location.X, location.Y), FVector2D(0, 1), steepness, time);
+	sum += CalculateGerstnerWaveCluster(MedianWaveOneWavelength, MedianWaveOneAmplitude, FVector2D(location.X, location.Y), FVector2D(0, 1), Steepness, time);
+	sum += CalculateGerstnerWaveCluster(MedianWaveTwoWavelength, MedianWaveTwoAmplitude, FVector2D(location.X, location.Y), FVector2D(0, 1), Steepness, time);
 
 	return sum / 2;
 }
