@@ -1,0 +1,16 @@
+Binaries
+Content
+DerivedDataCache
+Intermediate
+Saved
+PolygonalMapGen.uproject
+PolygonalMapGen.Target.cs
+PolygonalMapGenEditor.Target.cs
+*.VC.db
+*.opensdf
+*.opendb
+*.sdf
+*.sln
+*.suo
+*.xcodeproj
+*.xcworkspace
