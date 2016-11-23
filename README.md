@@ -11,6 +11,14 @@ There are a few main parts to this plugin:
 
 * **ShipSystem**: This is intended for any extra parts which fit on the boat. These can either be visual parts, parts which add extra functionality to the ship, etc. The only class currently implemented that inherits from `ShipSystemComponent` is the `EngineSystem`, which provides appropriate engine noises when the ship is throttled up or down.
 
+# Content
+
+In addition to the code, there is also a little bit of content included with this project -- namely, 3 water materials, some Material Functions, a Material Parameter Collection, and a lava material.
+
+To view them, go to your Content Browser, select "View Options" (in the bottom right), and ensure that "Show Plugin Content" is checked. A whole *bunch* of stuff will appear in the Sources Panel to the right (click the little button with a few lines and an arrow in the upper-left of the content browser if you don't see it). What you're looking for is "BuoyancySystem Content". Scroll down in the list until you find it. You should see a folder called `Materials`, and 2 subfolders -- `Functions` and `Water`. Functions contains all the material functions, while `Water` contains the actual water materials. The base `Materials` folder contains the MaterialParameterCollection.
+
+The material M_MasterWater is the "main" water material, and the other materials are Material Instances of it. The MaterialParameterCollection WaterParameters is the MaterialParameterCollection that the `BuoyancyManager` should reference. You can adjust it as need be to fit whatever look you're going for for you water, and those should propagate properly to your `BuoyancyManager`.
+
 #Installation
 
 First, make a `Plugins` folder at your project root (where the .uproject file is), if you haven't already. Then, clone this project into a subfolder in your Plugins directory. After that, open up your project's .uproject file in Notepad (or a similar text editor), and change the `"AdditionalDependencies"` and `"Plugins"` sections to look like this:
