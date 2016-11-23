@@ -7,7 +7,7 @@
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class UBuoyancyManager : public UActorComponent
+class BUOYANCYSYSTEM_API UBuoyancyManager : public UActorComponent
 {
 	GENERATED_BODY()
 
