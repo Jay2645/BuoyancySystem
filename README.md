@@ -22,13 +22,13 @@ First, make a `Plugins` folder at your project root (where the .uproject file is
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
-				// Any other dependencies go here
+				<OTHER DEPENDENCIES GO HERE>
 				"BuoyancySystem"
 			]
 		}
 	],
 	"Plugins": [
-		// Other plugins go here  
+		<OTHER PLUGINS GO HERE>
 		{
 			"Name": "BuoyancySystem",
 			"Enabled": true
@@ -38,7 +38,7 @@ First, make a `Plugins` folder at your project root (where the .uproject file is
 
 You can now open up your project in Unreal. You might be told that your project is out of date, and the editor will ask if you want to rebuild them. You do. After that, open up the Plugins menu, scroll down to the bottom, and ensure that the "BuoyancySystem" plugin is enabled.
 
-In order to enable the stencil buffer and have the interior render properly, you need to enable the Custom Stencil Buffer. Go to ***Window > Project Settings > Rendering > Post Process > Custom Depth-stencil Pass*** and set it to **Enabled with Stencil**. This will allow the interior of your boat to be drawn "on top of" the water, which creates the illusion that the water plane isn't actually intersecting the inside of your boat.
+In order to enable the stencil buffer and have the interior render properly, you need to enable the Custom Stencil Buffer. Go to ***Window > Project Settings > Rendering > Post Process > Custom Depth-Stencil Pass*** and set it to **Enabled with Stencil**. This will allow the interior of your boat to be drawn "on top of" the water, which creates the illusion that the water plane isn't actually intersecting the inside of your boat.
 
 A side effect of this is that the interior of your boat needs to be a separate mesh from the outside -- if the entire boat is written to the stencil buffer, it'll always be drawn on top of the waves, and if the stencil buffer isn't used at all, the interior of your boat will flood whenever the water bobs up and down.
 
