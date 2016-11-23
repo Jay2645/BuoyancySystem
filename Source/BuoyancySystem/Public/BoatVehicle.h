@@ -13,7 +13,7 @@
  * 
  */
 UCLASS()
-class BUOYANCYSYSTEM_API ABoatVehicle : public AWheeledVehicle
+class BUOYANCYSYSTEM_API ABoatVehicle : public AWheeledVehicle, public IBuoyant
 {
 	GENERATED_BODY()
 public:
@@ -38,6 +38,11 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Ship")
 	TArray<UShipSystem*> ShipSystems;
+protected:
+	UBuoyantComponent* GetBuoyancyComponent_Implementation();
+public:
+	UFUNCTION(BlueprintNativeEvent, Category = "Buoyancy")
+	UBuoyantComponent* GetBuoyancyComponent();
 
 public:
 	UFUNCTION(BlueprintCallable, Category="Ship")

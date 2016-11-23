@@ -93,6 +93,11 @@ void ABoatVehicle::BeginPlay()
 	}
 }
 
+UBuoyantComponent* ABoatVehicle::GetBuoyancyComponent_Implementation()
+{
+	return BuoyantComponent;
+}
+
 void ABoatVehicle::RegisterShipSystem(UShipSystem* ShipSystem)
 {
 	ShipSystems.Add(ShipSystem);
