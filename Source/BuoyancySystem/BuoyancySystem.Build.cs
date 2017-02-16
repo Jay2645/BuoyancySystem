@@ -28,6 +28,7 @@ public class BuoyancySystem : ModuleRules
 			{
 				"Core",
 				// ... add other public dependencies that you statically link with here ...
+				"PhysXVehicles"
 			}
 			);
 			
@@ -40,6 +41,7 @@ public class BuoyancySystem : ModuleRules
 				"Slate",
 				"SlateCore",
 				// ... add private dependencies that you statically link with here ...	
+				"PhysXVehicles"
 			}
 			);
 		

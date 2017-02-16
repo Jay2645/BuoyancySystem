@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "BuoyancySystemPrivatePCH.h"
-#include "Vehicles/WheeledVehicleMovementComponent.h"
+#include "WheeledVehicleMovementComponent.h"
 #include "BoatVehicle.h"
 
 ABoatVehicle::ABoatVehicle()

@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "Vehicles/VehicleWheel.h"
+#include "VehicleWheel.h"
 #include "ShipVehicleWheel.generated.h"
 
 /**

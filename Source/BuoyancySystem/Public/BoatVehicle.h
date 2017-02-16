@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "GameFramework/WheeledVehicle.h"
+#include "WheeledVehicle.h"
 #include "BuoyantComponent.h"
 #include "Systems/ShipSystem.h"
 #include "Systems/BowShipVehicleWheel.h"
