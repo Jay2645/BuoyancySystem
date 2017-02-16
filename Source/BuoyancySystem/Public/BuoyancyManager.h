@@ -3,6 +3,8 @@
 #pragma once
 
 #include "Components/ActorComponent.h"
+#include "Materials/MaterialParameterCollection.h"
+#include "GameFramework/GameStateBase.h"
 #include "BuoyancyManager.generated.h"
 
 

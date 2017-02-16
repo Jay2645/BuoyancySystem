@@ -3,6 +3,9 @@
 #pragma once
 
 #include "WheeledVehicle.h"
+#include "GameFramework/SpringArmComponent.h"
+#include "Camera/CameraComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "BuoyantComponent.h"
 #include "Systems/ShipSystem.h"
 #include "Systems/BowShipVehicleWheel.h"

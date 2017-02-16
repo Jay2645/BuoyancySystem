@@ -3,6 +3,7 @@
 #pragma once
 
 #include "Systems/ShipSystem.h"
+#include "Components/AudioComponent.h"
 #include "EngineSystem.generated.h"
 
 /**

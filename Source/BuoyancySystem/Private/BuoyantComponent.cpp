@@ -2,6 +2,7 @@
 
 #include "BuoyancySystemPrivatePCH.h"
 #include "GameFramework/GameState.h"
+#include "DrawDebugHelpers.h"
 #include "BuoyantComponent.h"
 
 UBuoyant::UBuoyant(const class FObjectInitializer& ObjectInitializer)
