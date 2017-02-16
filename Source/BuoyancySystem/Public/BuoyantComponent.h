@@ -110,5 +110,5 @@ public:
 private:
 	void ProcessWaveHeight();
 public:
-	FWavePointData ProcessWaveHeightAtPoint(FVector pointLocation, FTransform actorTransform);
+	FWavePointData ProcessWaveHeightAtPoint(FVector pointLocation, const FTransform& actorTransform);
 };

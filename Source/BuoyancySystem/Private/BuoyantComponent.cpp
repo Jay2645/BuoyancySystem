@@ -171,7 +171,7 @@ void UBuoyantComponent::ProcessWaveHeight()
 	}
 }
 
-FWavePointData UBuoyantComponent::ProcessWaveHeightAtPoint(FVector pointLocation, FTransform actorTransform)
+FWavePointData UBuoyantComponent::ProcessWaveHeightAtPoint(FVector pointLocation, const FTransform& actorTransform)
 {
 	FWavePointData waveData;
 	FVector transformedPoint = actorTransform.TransformPosition(pointLocation);
