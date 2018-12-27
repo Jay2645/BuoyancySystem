@@ -4,9 +4,9 @@ using UnrealBuildTool;
 
 public class BuoyancySystem : ModuleRules
 {
-	public BuoyancySystem(TargetInfo Target)
+	public BuoyancySystem(ReadOnlyTargetRules Target) : base(Target)
 	{
-		
+		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		PublicIncludePaths.AddRange(
 			new string[] {
 				"BuoyancySystem/Public"
