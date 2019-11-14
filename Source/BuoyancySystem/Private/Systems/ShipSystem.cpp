@@ -1,8 +1,8 @@
 // Copyright 2016 Schemepunk Studios
 
-#include "BuoyancySystemPrivatePCH.h"
-#include "BoatVehicle.h"
 #include "ShipSystem.h"
+#include "BoatVehicle.h"
+
 
 void UShipSystem::BeginPlay()
 {

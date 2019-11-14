@@ -6,8 +6,9 @@ public class BuoyancySystem : ModuleRules
 {
 	public BuoyancySystem(ReadOnlyTargetRules Target) : base(Target)
 	{
-		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-		PublicIncludePaths.AddRange(
+        PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+        PrivatePCHHeaderFile = "Private/BuoyancySystemPrivatePCH.h";
+        PublicIncludePaths.AddRange(
 			new string[] {
 				"BuoyancySystem/Public"
 				// ... add public include paths required here ...
