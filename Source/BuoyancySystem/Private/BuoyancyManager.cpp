@@ -1,9 +1,7 @@
 // Copyright 2016 Schemepunk Studios
 
-#include "BuoyancySystemPrivatePCH.h"
-#include "Runtime/Engine/Classes/Kismet/KismetMaterialLibrary.h"
 #include "BuoyancyManager.h"
-
+#include "Runtime/Engine/Classes/Kismet/KismetMaterialLibrary.h"
 
 // Sets default values for this component's properties
 UBuoyancyManager::UBuoyancyManager()

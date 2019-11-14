@@ -1,9 +1,8 @@
 // Copyright 2016 Schemepunk Studios
 
-#include "BuoyancySystemPrivatePCH.h"
+#include "BuoyantComponent.h"
 #include "GameFramework/GameState.h"
 #include "DrawDebugHelpers.h"
-#include "BuoyantComponent.h"
 
 UBuoyant::UBuoyant(const class FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
